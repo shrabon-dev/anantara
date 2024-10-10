@@ -4,6 +4,11 @@
     box-sizing: border-box;
 }
 
+:root{
+    --main-clr:#035231;
+    --secondary-clr:#FFFDDF;
+}
+
 body{
     width: 100vw;
     height: 100vh;
@@ -15,30 +20,31 @@ body{
 .navbar{
     z-index: 999999999;
     background: #7e20221e;
-    perspective:1000px;
+    perspective:500px;
     backdrop-filter: blur(20px);
-    transform: translateY(0px) skew(0deg) rotatex(90deg);
-    -webkit-transform: translateY(0px) skew(0deg) rotatex(90deg);
-    -moz-transform: translateY(0px) skew(0deg) rotatex(90deg);
-    -ms-transform: translateY(0px) skew(0deg) rotatex(90deg);
-    -o-transform: translateY(0px) skew(0deg) rotatex(90deg);
+    transform:  translateX(100%);
+    -webkit-transform:  translateX(100%);
+    -moz-transform:  translateX(100%);
+    -ms-transform:  translateX(100%);
+    -o-transform:  translateX(100%);
     animation: navbar 1s 1s forwards ease-in-out;
     -webkit-animation: navbar 1s 1s forwards ease-in-out;
+    transform-style: preserve-3d;
 }
 @keyframes navbar {
     0%{
-        transform: translateY(0px) skew(0deg) rotatex(90deg);
-        -webkit-transform: translateY(0px) skew(0deg) rotatex(90deg);
-        -moz-transform: translateY(0px) skew(0deg) rotatex(90deg);
-        -ms-transform: translateY(0px) skew(0deg) rotatex(90deg);
-        -o-transform: translateY(0px) skew(0deg) rotatex(90deg);
+        transform: translateX(100%);
+        -webkit-transform: translateX(100%);
+        -moz-transform: translateX(100%);
+        -ms-transform: translateX(100%);
+        -o-transform: translateX(100%);
 }
     100%{
-        transform: translateY(0px) skew(0deg) rotatex(0deg);
-        -webkit-transform: translateY(0px) skew(0deg) rotatex(0deg);
-        -moz-transform: translateY(0px) skew(0deg) rotatex(0deg);
-        -ms-transform: translateY(0px) skew(0deg) rotatex(0deg);
-        -o-transform: translateY(0px) skew(0deg) rotatex(0deg);
+        transform: translateX(0);
+        -webkit-transform: translateX(0);
+        -moz-transform: translateX(0);
+        -ms-transform: translateX(0);
+        -o-transform: translateX(0);
 }
 } 
 .navbar .navbar-brand img{
@@ -46,30 +52,34 @@ body{
     /* margin-top: 20px; */
 }
 .navbar ul li a{
-    color: #FFFDDF !important;
+    color: var(--secondary-clr) !important;
     font-size: 18px;
-    font-weight: 300 !important;
+    font-weight: 500 !important;
     padding: 10px 20px !important;
     display: inline-block;
     background: #7e20221a;
     margin: 0 10px;
-    border-radius: 5px;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    -ms-border-radius: 5px;
-    -o-border-radius: 5px;
-
+    border-radius: 500px;
+    -webkit-border-radius: 500px;
+    -moz-border-radius: 500px;
+    -ms-border-radius: 500px;
+    -o-border-radius: 500px;
     position: relative;
-   
+    z-index: 99;
+    transition: .4s all ease-in-out;
+    -webkit-transition: .4s all ease-in-out;
+    -moz-transition: .4s all ease-in-out;
+    -ms-transition: .4s all ease-in-out;
+    -o-transition: .4s all ease-in-out;
 }
  .navbar ul li a::after{
     content: "";
     position: absolute;
-    top: -20px;
+    top: 0px;
     right: 0;
     width: 100%;
     height: 50px;
-    background-image: url('./images/menu.png');
+    background-image: url('./images/menu3.jpg');
     background-size: cover;
     transition: .4s all ease-in-out;
     -webkit-transition: .4s all ease-in-out;
@@ -77,13 +87,20 @@ body{
     -ms-transition: .4s all ease-in-out;
     -o-transition: .4s all ease-in-out;
     opacity: 0;
+    border-radius: 500px;
+    -webkit-border-radius: 500px;
+    -moz-border-radius: 500px;
+    -ms-border-radius: 500px;
+    -o-border-radius: 500px;
+    z-index: -9;
 } 
 .navbar ul li a:hover:after{
-    top: -5px;
     opacity: 1;
-
 }
-.navbar ul li a::before{
+.navbar ul li a:hover{
+    color: var(--main-clr) !important;
+}
+/* .navbar ul li a::before{
     content: "";
     position: absolute;
     bottom: -25px;
@@ -103,7 +120,7 @@ body{
     -ms-transition: .4s all ease-in-out;
     -o-transition: .4s all ease-in-out;
     opacity: 0;
-}
+} */
 .navbar ul li a:hover:before{
     bottom: -5px;
     opacity: 1;
@@ -279,10 +296,10 @@ img{
     position: absolute;
     bottom: 0;
     left: 0;
-    z-index: 9999;
+    z-index: 9999999;
     width: 100%;
-    animation: grass 8s 3s;
-    -webkit-animation: grass 8s 3s;
+    animation: grass 8s 6s forwards;
+    -webkit-animation: grass 8s 6s forwards;
     opacity: 0;
 }
 .scene_two img{
@@ -298,8 +315,8 @@ img{
     z-index: 99999;
     transform: scale(.5) translateY(0px);
     opacity: 0;
-    animation: building 2s 5s forwards;
-    -webkit-animation: building 2s 5s forwards;
+    animation: building 3s 10s forwards;
+    -webkit-animation: building 3s 10s forwards;
     -webkit-transform: scale(.5) translateY(0px);
     -moz-transform: scale(.5) translateY(0px);
     -ms-transform: scale(.5) translateY(0px);
