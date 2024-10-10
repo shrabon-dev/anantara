@@ -89,10 +89,12 @@
      document.addEventListener("DOMContentLoaded", function() {
           // Select the .scene_two element
           const sceneTwo = document.querySelector('.scene_two');
+          const logo = document.querySelector('.logo');
 
           // Add the animate class to start the entrance animation after 2 seconds
           setTimeout(function() {
               sceneTwo.classList.add('animate');
+              logo.classList.add('animate');
               
               // After the entrance animation is done, start the exit animation
               setTimeout(function() {
