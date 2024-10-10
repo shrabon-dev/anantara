@@ -63,15 +63,43 @@
                 <img src="./images/star.png" alt="star">
                 <img src="./images/star.png" alt="star">
             </span>
+            <span class="star">
+                <img src="./images/star.png" alt="star">
+                <img src="./images/star.png" alt="star">
+                <img src="./images/star.png" alt="star">
+                <img src="./images/star.png" alt="star">
+                <img src="./images/star.png" alt="star">
+                <img src="./images/star.png" alt="star">
+                <img src="./images/star.png" alt="star">
+                <img src="./images/star.png" alt="star">
+                <img src="./images/star.png" alt="star">
+                <img src="./images/star.png" alt="star">
+            </span>
         </div>
-          <!-- <div class="scene_two">
-            <img src="./images/grass.png" alt="">
-        </div> -->
+          <div class="scene_two">
+            <img src="./images/grass4.png" alt="">
+        </div>
         <div class="scene_three">
-            <img src="./images/bld2.png" alt="building">
+            <img src="./images/bld4.png" alt="building">
         </div>
   
      </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+     <script>
+     document.addEventListener("DOMContentLoaded", function() {
+          // Select the .scene_two element
+          const sceneTwo = document.querySelector('.scene_two');
+
+          // Add the animate class to start the entrance animation after 2 seconds
+          setTimeout(function() {
+              sceneTwo.classList.add('animate');
+              
+              // After the entrance animation is done, start the exit animation
+              setTimeout(function() {
+                  sceneTwo.classList.add('exit');
+              }, 8000); // 8000 milliseconds = 8 seconds total (2s for entrance delay + 6s animation duration)
+          }, 6000); // 2000 milliseconds = 2 seconds
+      });
+     </script>
   </body>
 </html>
