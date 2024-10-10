@@ -329,12 +329,12 @@ img{
 
 @keyframes building {
     0% {
-        transform: scale(1) translateY(500px);
+        transform: scale(1) translateY(200px);
         opacity: 0;
-        -webkit-transform: scale(1) translateY(500px);
-        -moz-transform: scale(1) translateY(500px);
-        -ms-transform: scale(1) translateY(500px);
-        -o-transform: scale(1) translateY(500px);
+        -webkit-transform: scale(1) translateY(200px);
+        -moz-transform: scale(1) translateY(200px);
+        -ms-transform: scale(1) translateY(200px);
+        -o-transform: scale(1) translateY(200px);
 }
     100% {
         transform: scale(1) translateY(0px);
