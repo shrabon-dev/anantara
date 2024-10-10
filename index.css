@@ -482,20 +482,17 @@ img{
     .scene_three img {
         height: 320px;
     }
-    .star{
-        overflow: hidden;
-    }
     .star img:nth-child(1) {
         left: 24px;
         top:  10px;
     }
     .star img:nth-child(2) {
         left: 54px;
-        top:  30px;
+        top:  -130px;
     }
     .star img:nth-child(3) {
-        left: 44px;
-        top:  0px;
+        left: 272px;
+        top: -108px;
         animation-delay: .7s;
     }
     .star img:nth-child(4) {
@@ -519,12 +516,12 @@ img{
         animation-delay: .7s;
     }
     .star img:nth-child(8) {
-        left: 50px;
+        left: 282px;
         top: -19px;
         animation-delay: .7s;
     }
     .star img:nth-child(9) {
-        left: 35px;
+        left: 260px;
         top: 20px;
         animation-delay: .3s;
     }
