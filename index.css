@@ -292,9 +292,10 @@ img{
 
 /* Scene Two */
 .scene_two{
+    display: none;
     width: 100%;
     overflow: hidden;
-    position: fixed;
+    position: absolute;
     bottom: 0;
     left: 0;
     z-index: 9999999;
@@ -318,8 +319,8 @@ img{
     z-index: 99999;
     transform: scale(.5) translateY(0px);
     opacity: 0;
-    animation: building 3s 10s forwards;
-    -webkit-animation: building 3s 10s forwards;
+    animation: building 3s 5s forwards;
+    -webkit-animation: building 3s 5s forwards;
     -webkit-transform: scale(.5) translateY(0px);
     -moz-transform: scale(.5) translateY(0px);
     -ms-transform: scale(.5) translateY(0px);
@@ -468,36 +469,59 @@ img{
     .scene_three img {
         height: 320px;
     }
+    .star{
+        overflow: hidden;
+    }
+    .star img:nth-child(1) {
+        left: 24px;
+        top:  10px;
+    }
+    .star img:nth-child(2) {
+        left: 54px;
+        top:  30px;
+    }
     .star img:nth-child(3) {
         left: 44px;
-        top: -100px;
+        top:  0px;
+        animation-delay: .7s;
+    }
+    .star img:nth-child(4) {
+        left: 70px;
+        top: 70px;
+        animation-delay: .4s;
+    }
+    .star img:nth-child(5) {
+        left: 85px;
+        top: 40px;
+        animation-delay: .4s;
+    }
+    .star img:nth-child(6) {
+        left: 120px;
+        top: 60px;
+        animation-delay: .4s;
+    }
+    .star img:nth-child(7) {
+        left: 61px;
+        top: -49px;
+        animation-delay: .7s;
+    }
+    .star img:nth-child(8) {
+        left: 50px;
+        top: -19px;
         animation-delay: .7s;
     }
     .star img:nth-child(9) {
         left: 35px;
-        top: 209px;
+        top: 20px;
         animation-delay: .3s;
     }
-    .star img:nth-child(6) {
-        left: 200px;
-        top: 100px;
-        animation-delay: .4s;
-    }
-    .star img:nth-child(8) {
-        left: 140px;
-        top: -19px;
-        animation-delay: .7s;
-    }
+   
     .star img:nth-child(10) {
-        left: 300px;
-        top: 200px;
+        left: 40px;
+        top: 40px;
         animation-delay: .4s;
     }
-    .star img:nth-child(4) {
-        left: 230px;
-        top: -100px;
-        animation-delay: .4s;
-    }
+ 
 }
 
 @media screen and (max-width:345px) {
