@@ -17,6 +17,9 @@ body{
     font-family: "Raleway", sans-serif;
 
 }
+.animate_scene{
+    overflow: hidden !important;
+}
 .navbar{
     z-index: 999999999;
     background: #7e20221e;
