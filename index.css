@@ -452,6 +452,8 @@ img{
 }
 @media screen and (max-width:665px) {
     body{
+        width: 100vw;
+        height: 100vh;
         overflow: hidden;
     }
     .navbar ul {
@@ -526,6 +528,8 @@ img{
 
 @media screen and (max-width:345px) {
     body{
+        width: 100vw;
+        height: 100vh;
         overflow: hidden;
     }
     .logo img {
