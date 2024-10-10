@@ -9,13 +9,13 @@
     --secondary-clr:#FFFDDF;
 }
 
-body{
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
     width: 100vw;
     height: 100vh;
-    overflow: hidden;
-    position: relative;
-    font-family: "Raleway", sans-serif;
-
+    box-sizing: border-box;
 }
 .animate_scene{
     overflow: hidden !important;
@@ -403,8 +403,13 @@ img{
     }
 }
 @media (min-width:666px) and (max-width:999px) {
-    body{
+    html, body {
+        margin: 0;
+        padding: 0;
         overflow: hidden;
+        width: 100vw;
+        height: 100vh;
+        box-sizing: border-box;
     }
     .navbar ul li a{
         background: transparent !important;
@@ -454,10 +459,13 @@ img{
     }
 }
 @media screen and (max-width:665px) {
-    body{
+    html, body {
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
         width: 100vw;
         height: 100vh;
-        overflow: hidden;
+        box-sizing: border-box;
     }
     .navbar ul {
         padding: 20px 0;
