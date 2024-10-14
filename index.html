@@ -45,10 +45,10 @@
   </nav>
 
      <div class="animate_scene">
-        <div class="logo">
+        <div class="logo top-move">
             <img class="grass" src="./images/logo.png" alt="logo.png">
         </div>
-        <div class="scen_one">
+        <div class="scene_one animate">
             <img class="day" src="./images/day-sky.jpg" alt="day-sky">
             <img class="night" src="./images/sky.jpg" alt="sky">
             <span class="star">
@@ -79,29 +79,50 @@
           <div class="scene_two">
             <img src="./images/grass4.png" alt="">
         </div>
-        <div class="scene_three">
+        <div class="scene_three b-animate">
             <img src="./images/bld4.png" alt="building">
         </div>
   
      </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-     <script>
-     document.addEventListener("DOMContentLoaded", function() {
-          // Select the .scene_two element
-          const sceneTwo = document.querySelector('.scene_two');
-          const logo = document.querySelector('.logo');
-
-          // Add the animate class to start the entrance animation after 2 seconds
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        const sceneTwo = document.querySelector('.scene_two');
+        const logo = document.querySelector('.logo');
+        const sceneOne = document.querySelector('.scene_one'); 
+        const sceneThree = document.querySelector('.scene_three');  
+        
+        function grass(){
           setTimeout(function() {
-              sceneTwo.classList.add('animate');
-              logo.classList.add('animate');
-              
-              // After the entrance animation is done, start the exit animation
-              setTimeout(function() {
-                  sceneTwo.classList.add('exit');
-              }, 8000); // 8000 milliseconds = 8 seconds total (2s for entrance delay + 6s animation duration)
-          }, 6000); // 2000 milliseconds = 2 seconds
+          sceneTwo.classList.add('animate');
+          logo.classList.add('animate');
+        
+          setTimeout(function() {
+            sceneTwo.classList.add('exit');
+          }, 8000);
+        }, 6000);
+        }
+        grass();
+    
+        function classAdd() {
+            sceneOne.classList.remove('animate'); 
+            sceneTwo.classList.remove('animate');
+            sceneTwo.classList.remove('exit');
+            sceneThree.classList.remove('b-animate'); 
+            logo.classList.remove('top-move');
+            logo.classList.remove('animate');
+            setTimeout(() => {
+              sceneOne.classList.add('animate');
+              // sceneTwo.classList.add('animate');
+              sceneThree.classList.add('b-animate');
+              logo.classList.add('top-move');
+              grass();
+            }, 1000);
+        }
+    
+        setInterval(classAdd, 30000);  
       });
-     </script>
+    </script>
+    
   </body>
 </html>
